@@ -45,7 +45,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 const images = [
-  '/image.png','/image3.png'
+  '/5.png', '/6.png'
 ];
 
 function App() {
@@ -61,14 +61,15 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">Flower Carousel </h1>
+      <h1 className="title">Flowers Carousel</h1>
       <div className="carousel">
-        <img src={images[index]} alt="Car" className="carousel-image" />
+        <img src={images[index]} alt="Flowers" className="carousel-image" />
       </div>
       <div className="buttons">
         <button onClick={showPrevious}>Previous</button>
         <button onClick={showNext}>Next</button>
       </div>
+      <footer className="footer">Dharshini K 212223220017</footer>
     </div>
   );
 }
@@ -77,49 +78,67 @@ export default App;
 ```
 ## App.css:
 ```
-.App {
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-top: 40px;
+  background-color: #f0f4f8;  /* light background color */
+  width: 600px;               /* set fixed width */
+  height: 600px;              /* set fixed height */
+  margin-left: auto;          /* center horizontally */
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel {
+  width: 500px;
+  height: auto;
+  margin: 0 auto; /* centers the carousel horizontally */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centers the image if needed */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* New footer style */
+.footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
 }
 ```
 ## OUTPUT
 
-![WhatsApp Image 2025-05-17 at 14 16 38_c27d777a](https://github.com/user-attachments/assets/3c3ad73b-362c-4cd7-8e41-761f5a1e1836)
+![WhatsApp Image 2025-05-19 at 16 24 00_bf79236c](https://github.com/user-attachments/assets/7b9e9a26-d30b-4ddb-8ce7-98975f7e78c8)
 
-![WhatsApp Image 2025-05-17 at 14 16 41_54a99be0](https://github.com/user-attachments/assets/c541a457-b929-4fda-af7d-b412660d0501)
+![WhatsApp Image 2025-05-19 at 16 24 12_0d89657a](https://github.com/user-attachments/assets/6fc08533-bb1d-4a12-b4e2-c9141dcd6450)
 
 ## RESULT
 The program for creating Image Carousel using React is executed successfully.
